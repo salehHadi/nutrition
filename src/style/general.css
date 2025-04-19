@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: "Readex Pro", serif;
+  color: var(--text-color);
+}
+
+:root {
+  /* --primary-color: #3498db; */
+  --green-color: #75ff90;
+  /* --accent-color: #e74c3c; */
+  --background-color: #181c14;
+  --text-color: #ffffff;
+}
