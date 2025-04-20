@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.loading-page {
+  width: 100%;
+  height: 100vh;
+  background-color: #181c14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-page {
+  animation: logo 300ms ease-in-out infinite;
+}
+
+.svg {
+  width: 180px;
+  height: 180px;
+}
+
+@keyframes logo {
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  0% {
+    opacity: 1;
+  }
+}

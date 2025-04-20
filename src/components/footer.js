@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
 import logo from "../assets/logo.png";
 
@@ -6,6 +6,19 @@ export default function Footer() {
   const theme = useTheme();
 
   const matches = useMediaQuery(theme.breakpoints.up("md"));
+
+  const [isClicked, setIsClicked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleCopy = (text) => {
+    setIsHovered(false);
+    setIsClicked(true);
+    navigator.clipboard.writeText(text).then(() => {
+      setTimeout(() => {
+        setIsClicked(false);
+      }, 3000);
+    });
+  };
 
   return (
     <div
@@ -20,6 +33,7 @@ export default function Footer() {
       />
 
       <Typography
+        onClick={() => handleCopy("info@w-nutrition.com")}
         sx={{
           opacity: 0.8,
           fontSize: matches ? "20px" : "12px",
@@ -27,7 +41,7 @@ export default function Footer() {
         }}
         variant="h6"
       >
-        sasa97977s@hotmail.com
+        info@w-nutrition.com
       </Typography>
     </div>
   );

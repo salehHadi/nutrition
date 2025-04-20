@@ -4,12 +4,10 @@ import { lazy, Suspense } from "react";
 import "./style/general.css";
 import { Container, ThemeProvider } from "@mui/material";
 import theme from "./style/theme";
+import { Loading } from "./components/loading";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 
-const Loading = () => {
-  return <h1>Loading ...</h1>;
-};
 function App() {
   return (
     <ThemeProvider theme={theme}>
