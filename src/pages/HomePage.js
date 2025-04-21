@@ -11,6 +11,7 @@ import HeroSection from "../components/heroSection";
 import ContactUs from "../components/contactUs";
 import Footer from "../components/footer";
 import { Box, styled } from "@mui/material";
+import { Helmet } from "react-helmet";
 
 const Line = styled(Box)(() => ({
   display: "flex",
@@ -24,32 +25,43 @@ const Line = styled(Box)(() => ({
 
 export default function HomePage() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "80px",
-        flexDirection: "column",
-      }}
-    >
-      <Header />
-      <ShortRivews />
-      <HeroSection />
-      <Line />
-      {/* <OurPrograms /> */}
+    <>
+      <Helmet>
+        <title> W-Nutrition || التغذية بالمكملات</title>
+        <meta
+          name="description"
+          content="الطريقة الحديثة المبتكرة لمعلاجة المشاكل الصحية بالتغذية و المكملات الطبيعية"
+        />
+        <link rel="canonical" href="https://w-nutrition.com/" />
+      </Helmet>
 
-      {/* <Line /> */}
-      {/* <ExplinationVideos /> */}
-      {/* <Line /> */}
-      {/* <PromotionMessage />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "80px",
+          flexDirection: "column",
+        }}
+      >
+        <Header />
+        <ShortRivews />
+        <HeroSection />
+        <Line />
+        {/* <OurPrograms /> */}
+
+        {/* <Line /> */}
+        {/* <ExplinationVideos /> */}
+        {/* <Line /> */}
+        {/* <PromotionMessage />
       <Line />
       <OurFeatures />
       <Line /> */}
-      {/* <FullReivews />
+        {/* <FullReivews />
       <Line /> */}
-      <ContactUs />
-      <Footer />
-    </div>
+        <ContactUs />
+        <Footer />
+      </div>
+    </>
   );
 }
