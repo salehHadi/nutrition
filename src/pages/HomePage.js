@@ -43,6 +43,7 @@ export default function HomePage() {
           gap: "80px",
           flexDirection: "column",
         }}
+        className="fade"
       >
         <Header />
         <ShortRivews />
