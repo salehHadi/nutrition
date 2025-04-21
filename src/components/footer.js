@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import logo from "../assets/logo.png";
+import { ShowMessage } from "../style/theme";
 
 export default function Footer() {
   const theme = useTheme();
@@ -31,18 +32,27 @@ export default function Footer() {
         width={matches ? "136px" : "100px"}
         height={matches ? "136px" : "100px"}
       />
-
-      <Typography
+      <Box
+        sx={{ direction: "ltr", cursor: "pointer", position: "relative" }}
         onClick={() => handleCopy("info@w-nutrition.com")}
-        sx={{
-          opacity: 0.8,
-          fontSize: matches ? "20px" : "12px",
-          overflow: "hidden",
-        }}
-        variant="h6"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        info@w-nutrition.com
-      </Typography>
+        {isHovered && <ShowMessage>اضغط للنسخ</ShowMessage>}
+        {isClicked && <ShowMessage>تم النسخ</ShowMessage>}
+        <Typography
+          sx={{
+            opacity: 0.8,
+            fontSize: matches ? "20px" : "12px",
+            overflow: "hidden",
+            cursor: "pointer",
+            position: "relative",
+          }}
+          variant="h6"
+        >
+          info@w-nutrition.com
+        </Typography>
+      </Box>
     </div>
   );
 }

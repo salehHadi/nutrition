@@ -34,6 +34,19 @@ export const MainText = styled(Typography)(({ theme }) => ({
   },
 }));
 
+export const ShowMessage = styled(Typography)(({ theme }) => ({
+  position: "absolute",
+  top: -25,
+  right: 50,
+  fontSize: "10px",
+  padding: "4px",
+  borderRadius: "4px",
+  fontWeight: "bold",
+  backgroundColor: "white",
+  color: "black",
+  display: "inline-block",
+}));
+
 const theme = createTheme({
   //   palette: {
   //     primary: {

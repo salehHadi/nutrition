@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MainText } from "../style/theme";
+import { MainText, ShowMessage } from "../style/theme";
 import {
   Box,
   styled,
@@ -47,18 +47,6 @@ const WhatsAppContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-const ShowMessage = styled(Typography)(({ theme }) => ({
-  position: "absolute",
-  top: -25,
-  right: 50,
-  fontSize: "10px",
-  padding: "4px",
-  borderRadius: "4px",
-  fontWeight: "bold",
-  backgroundColor: "white",
-  color: "black",
-  display: "inline-block",
-}));
 export default function ContactUs() {
   const theme = useTheme();
 
