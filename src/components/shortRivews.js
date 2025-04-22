@@ -5,7 +5,7 @@ import starts from "../assets/starts.svg";
 const ReviewContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-around",
-  alignItems: "center",
+  alignItems: "start",
   width: "100%",
   marginTop: "-60px",
   [theme.breakpoints.up("md")]: {
@@ -46,7 +46,7 @@ export default function HeroSection() {
           <img src={starts} alt="start" width="100%" height="100%" />
         </ImageDiv>
         <Typography variant="h2" className="text-center">
-          الام ركبي تعافت، ووزني نزل بطريقة طبيعية بدون ترهلات
+          وزن بنتي الصغيره زاد بطريقة صحية و الصحة و العافية بدات تبان عليها
         </Typography>
       </ReviewDiv>
       <ReviewDiv className="d-flex flex-column justify-content-center align-items-center gap-1">
@@ -54,7 +54,7 @@ export default function HeroSection() {
           <img src={starts} alt="start" width="100%" height="100%" />
         </ImageDiv>
         <Typography variant="h2" className="text-center">
-          الام ركبي تعافت، ووزني نزل بطريقة طبيعية بدون ترهلات
+          خطة التغذية زادت النشاط عندي و النوم انتضم و سار اعمق
         </Typography>
       </ReviewDiv>
     </ReviewContainer>

@@ -37,7 +37,9 @@ export const MainText = styled(Typography)(({ theme }) => ({
 export const ShowMessage = styled(Typography)(({ theme }) => ({
   position: "absolute",
   top: -25,
-  right: 50,
+  right: "0%",
+  width: "100px",
+  textAlign: "center",
   fontSize: "10px",
   padding: "4px",
   borderRadius: "4px",
