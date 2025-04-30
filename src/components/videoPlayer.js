@@ -9,7 +9,7 @@ export default function VideoPlayer() {
   return (
     <div>
       <ReactPlayer
-        url="https://home.wistia.com/medias/myqh8mq63t"
+        url="https://home.wistia.com/medias/bvcbeso4sh"
         controls
         width={matches ? "700px" : "370px"}
         height={matches ? "300px" : "200px"}
